@@ -13,21 +13,25 @@ import flask from '../img/flask.png'
 import mongo from '../img/mongo.png'
 import sql from '../img/sql.svg'
 import php from '../img/php.svg'
-import linkedin from '../img/linkedin.svg'
-import github from '../img/github.svg'
+import linkedin from '../img/linkedinIcon.svg'
+import github from '../img/githubIcon.svg'
+import resumeIcon from '../img/resumeIcon.svg'
 
 export default function About() {
     return (
         <div className="about">
         <Container>
         <h1>About Me</h1>
-        <p>My name is Jose Ramirez. I am a programmer who loves to code. I earned my Bachelor's Degree in Computer Science from the University of Maryland Global Campus, in the fall of 2019. 
-            I grew a love for front-end development using JavaScript, HTML5, CSS3, ReactJS. I have experience creating REST APIs using Node.js, Express.js, and Flask, so I'm pretty familiar with back-end development as well.
-            I created many projects in college using Java and created Python interfaces for the Library of Congress in Washington, DC.
+        <p> My name is Jose Ramirez and I am a full-stack Web Developer and Software Developer, currently living in Frederick, Maryland. I have a Bachelor of Science in Computer Science
+            from the University of Maryland Global Campus. My primary focus is front-end development with React.js and Software Development with Java/Python. However, I have developed
+            REST APIs using the MERN stack (MongoDB, Express, React.js, Node.js). During my internship with the Library of Congress (Washington, DC) I developed several financial system interfaces with Python. I am not 
+            limited to one language/framework as I am constantly experimenting with new technologies and techniques to become an overall better developer. I am very passionate about my work
+            and strive to learn something new every day.
         </p>
         <div className="social">
         <a href="https://www.linkedin.com/in/jose-a-ramirez/" target="__blank"><img src={linkedin} alt="linkedin"/></a>
         <a href="https://github.com/jramirez108" target="__blank"><img src={github} alt="github"/></a>
+        <a href="https://drive.google.com/file/d/1VwfgJA6R4_u7ERfRMZs3xJpkYV5ATVhY/view?usp=sharing" target="__blank"><img src={resumeIcon} alt="resume"/></a>
         </div>
         <h1 className="skills">Skills</h1>
         <Row>

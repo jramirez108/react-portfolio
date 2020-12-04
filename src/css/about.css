@@ -12,22 +12,18 @@
 .about h1{
     padding-top: 5vh;
     text-align: center;
-    color: white;
+    color: #a8dadc;
     font-family: 'Cabin', sans-serif;
     font-size: 3rem;
 }
 
-.about .skills{
-    color: white;
-    font-size: 2rem;
-}
 .about h2{
     text-align: left;
     color: rgb(187, 185, 185);
 }
 
 .about p{
-    color: white;
+    color: #f1faee;
     font-family: 'Cabin', sans-serif;
     font-size: 1rem;
 }
@@ -49,8 +45,7 @@
 }
 
 .social img {
-    margin-right: 10px;
-    height: 40px;
+    margin-right: 20px;
 }
 
 .social img:hover {

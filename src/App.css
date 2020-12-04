@@ -102,6 +102,37 @@ nav{
               animated-cursor 600ms steps(29,end) infinite;
 }
 
+.svg{
+  margin-left: 60vw;
+  margin-top: 10vh;
+  position: absolute;
+}
+
+#chart {
+  animation: moveitem 1s 1;
+}
+
+#Desk{
+  animation: moveitem 2s 1;
+}
+
+#Chair{
+  animation: moveitem 3s 1;
+}
+
+#person{
+  animation: moveitem 3s 1;
+}
+
+@keyframes moveitem {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
+
 
 /* text animation */
 
@@ -129,6 +160,12 @@ nav{
   video { 
       width:auto;
       height: 100%;
+  }
+}
+
+@media (max-width: 1400px){
+  .svg{
+    display: none;
   }
 }
 

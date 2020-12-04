@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import '../App.css'
 import {Modal, ModalHeader, ModalBody, ModalFooter, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import axios from 'axios';
+import Svg from './Svg';
 
 
 export default function Main() {
@@ -57,6 +58,9 @@ export default function Main() {
 
     return (
         <div>
+        <div className="svg">
+        <Svg/>
+        </div>
         <div className="typewriter">
         <p>Hi, I'm <span>Jose</span>. Welcome to my portfolio!</p>
         <button type="button" onClick={toggle} data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" data-aos-delay="3000">Contact Me</button>
