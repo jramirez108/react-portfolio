@@ -10,6 +10,8 @@ import {
 
 import {Link} from "react-router-dom";
 import icon from '../img/JR.png';
+import aboutIcon from '../img/manager.svg'
+import projectIcon from '../img/project.svg'
 
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,9 +29,9 @@ export default function NavBar() {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
-            <Link style={linkStyle} to="/about"><NavItem>About</NavItem></Link>
-            <Link style={linkStyle} to="/projects"><NavItem>Projects</NavItem></Link>
-        </Nav>
+            <Link style={linkStyle} to="/about"><NavItem><img src={aboutIcon} alt='aboutIcon'/> About</NavItem></Link>
+            <Link style={linkStyle} to="/projects"><NavItem><img src={projectIcon} alt='projectIcon'/> Projects</NavItem></Link>
+            </Nav>
         </Collapse>
     </Navbar>
         </div>
