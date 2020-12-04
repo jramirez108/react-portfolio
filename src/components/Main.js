@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import '../App.css'
 import {Modal, ModalHeader, ModalBody, ModalFooter, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import axios from 'axios';
-import Svg from './Svg';
+import Svg from './Svg.js';
 
 
 export default function Main() {
