@@ -1,0 +1,77 @@
+.about{
+    min-height: 100vh;
+    max-width: 100vw;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.about h1{
+    padding-top: 5vh;
+    text-align: center;
+    color: white;
+    font-family: 'Cabin', sans-serif;
+    font-size: 3rem;
+}
+
+.about .skills{
+    color: white;
+    font-size: 2rem;
+}
+.about h2{
+    text-align: left;
+    color: rgb(187, 185, 185);
+}
+
+.about p{
+    color: white;
+    font-family: 'Cabin', sans-serif;
+    font-size: 1rem;
+}
+
+.about img{
+    height: 40px;
+}
+
+.about span{
+    padding-left: 10px;
+    font-family: 'Cabin', sans-serif;
+    font-size: 1rem;
+}
+
+.social {
+    padding-bottom: 40px;
+    box-shadow: 0 1em 1em -1em rgba(0, 0, 0, .45);
+    text-align: center;
+}
+
+.social img {
+    margin-right: 10px;
+    height: 40px;
+}
+
+.social img:hover {
+    height: 50px;
+}
+
+.toast{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.toast:hover{
+    background-color: rgba(255, 255, 255, .95);
+}
+
+
+@media screen and (max-width: 850px ){
+    .about h1{
+        padding-top: 2vh;
+    }
+    .about p{
+        font-size: 14px;
+    }
+}

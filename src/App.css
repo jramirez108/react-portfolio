@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  height: 100%;
+  width: 100%;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+video{
+  position: absolute;
+  width: auto;
+  height: 100vh;
+  z-index: -1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+.typewriter span{
+  color: #48cae4;
+}
+
+.typewriter{
+  position: absolute;
+  z-index: 1;
+}
+
+.typewriter p{
+  margin-top: 40vh;
+  margin-left: 15vw;
+}
+
+
+.typewriter button{
+  position: absolute;
+  z-index: 1;
+  margin-left: 15vw;
+  background-color: none;
+  color: white;
+  border-radius: 12px;
+  padding: 10px;
+  font-family: 'Bebas Neue', cursive; 
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(9, 166, 228, 0.4); /* Black w/ opacity */
+}
+
+.typewriter button:hover{
+  text-decoration: underline; 
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(9, 166, 228, 0.8); /* Black w/ opacity */
+}
+
+.typewriter p{
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Bebas Neue', cursive; 
+  font-size: 3rem;
+  color: rgba(255,255,255,.70);
+}
+
+.modal-dialog{
+  position: absolute;
+  z-index: 1;
+  max-width: 90vw;
+}
+
+.modal-header{
+  background-color: #2b2d42;
+  color: white;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-body{
+  background-color: #2b2d42;
+  color: white;
+}
+.modal-footer{
+  background-color: #2b2d42;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav{
+  box-shadow: 0 1em 1em -1em rgba(0, 0, 0, .45);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-item{
+  text-align: left;
+}
+
+.nav-item:hover{
+  background-color: rgba(255,255,255,.70);
+  padding: 10px;
+}
+/* Animation */
+.typewriter p {
+  animation:  animated-text 2s steps(29,end) 1s 1 normal both,
+              animated-cursor 600ms steps(29,end) infinite;
+}
+
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 600px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(0,255,0,.75);}
+  to{border-right-color: transparent;}
+}
+
+
+@media (min-aspect-ratio: 16/9) {
+  video {
+      width:100%;
+      height: auto;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-aspect-ratio: 16/9) {
+  video { 
+      width:auto;
+      height: 100%;
+  }
+}
+
+@media (max-width: 850px) {
+
+  video {
+    width: 90vw;
+    height: 90vh;
+    visibility: hidden;
+  }
+  body {
+      background-color: grey;
+      background-size: cover;
+  }
+  .typewriter p{
+    border-right: solid 3px rgba(0,255,0,.75);
+    white-space: nowrap;
+    overflow: hidden;    
+    font-family: 'Bebas Neue', cursive; 
+    font-size: 25px;
+    color: rgba(255,255,255,.90);
+  }
+
+  .typewriter p{
+    margin-top: 40vh;
+    margin-left: 5vw;
+  }
+
+  .typewriter button{
+    margin-left: 5vw;
+  }
+
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 320px;}
   }
 }

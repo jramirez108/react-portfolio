@@ -1,0 +1,97 @@
+.project-container{
+    height: 100%;
+    max-width: 100vw;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.back2top {
+    width: 40px;
+    border-radius: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 5vw;
+    background-color: rgb(191, 206, 226);
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.back2top:hover {
+    background-color:lightblue;
+    color: #000;
+    text-decoration: none;
+}
+
+.project-item {
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin-left: 5vw;
+    color: white;
+}
+
+.project-item .big{
+    max-height: 70vh;
+    max-width: 60vw;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5); 
+}
+
+
+.project-item a { 
+    color: black;
+    background-color: white;
+    border-style: solid;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+@media screen and (max-width: 850px ){
+    .project-container{
+        flex-direction: column;
+    }
+
+    .project-item {
+        margin: 0;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .project-item .big{
+        height: auto;
+        max-width: 80vw;
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5); 
+    }
+
+    .project-content{
+        margin-top: 20px;
+    }
+}
