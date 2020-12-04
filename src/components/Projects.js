@@ -114,7 +114,7 @@ export default function Projects() {
             img: asbservices
         }
     ]
-    const projectItems = projects.map(item => <Project key={item.name} img={item.img} title={item.name} buttonName={item.buttonName} link={item.buttonLink} lang={item.lang}/>)
+    const projectItems = projects.map(item => <Project img={item.img} title={item.name} buttonName={item.buttonName} link={item.buttonLink} lang={item.lang}/>)
 
     return (
         <div className="project-container">

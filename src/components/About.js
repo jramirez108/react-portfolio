@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/about.css'
-import { Container, Row, Col, Toast, ToastBody, Form, FormGroup, Label, Input} from 'reactstrap';
+import { Container, Row, Col, Toast, ToastBody} from 'reactstrap';
 import reactIcon from '../img/react.svg'
 import html5 from '../img/html5.png'
 import css3 from '../img/css3.svg'
