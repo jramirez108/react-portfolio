@@ -29,8 +29,8 @@ export default function NavBar() {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
-            <Link style={linkStyle} to="/about"><NavItem><img src={aboutIcon} alt='aboutIcon'/> About</NavItem></Link>
-            <Link style={linkStyle} to="/projects"><NavItem><img src={projectIcon} alt='projectIcon'/> Projects</NavItem></Link>
+            <Link className="hvr-bounce-to-right" style={linkStyle} to="/about"><NavItem><img src={aboutIcon} alt='aboutIcon'/><div className="linkText"> About</div></NavItem></Link>
+            <Link className="hvr-bounce-to-right" style={linkStyle} to="/projects"><NavItem><img src={projectIcon} alt='projectIcon'/><div className="linkText"> Projects</div></NavItem></Link>
             </Nav>
         </Collapse>
     </Navbar>

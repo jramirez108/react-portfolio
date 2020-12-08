@@ -118,7 +118,7 @@ export default function Projects() {
 
     return (
         <div className="project-container">
-        <a href="#" className="back2top">&#10148;</a>
+        <a className="back2top">&#10148;</a>
         <Container fluid>
         {projectItems}
         </Container>
