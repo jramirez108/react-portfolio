@@ -18,6 +18,7 @@ import currency from '../img/currency.PNG'
 import sql from '../img/sql.svg'
 import companydb from '../img/CompanyDB.PNG'
 import pong from '../img/pong.PNG'
+import champions from '../img/champions.PNG'
 
 
 export default function Projects() {
@@ -50,6 +51,13 @@ export default function Projects() {
         document.addEventListener("scroll", handleScroll)
         }, [])
     const projects = [
+        {
+            name: 'Champions League App',
+            lang: [html5, css3, js, reactIcon],
+            buttonName: 'Visit',
+            buttonLink: 'https://jr-championsleague.herokuapp.com/',
+            img: champions
+        },
         {
             name: 'Landing Page',
             lang: [html5, css3, js],
