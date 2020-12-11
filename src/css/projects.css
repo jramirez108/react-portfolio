@@ -112,6 +112,12 @@
     transform: scale(1);
 }
 
+.info{
+    margin-top: 2em;
+    text-align: center;
+    color:rgba(255, 255, 255, 0.5);
+    font-style: italic;
+}
 
 @media screen and (max-width: 850px ){
     .project-container{

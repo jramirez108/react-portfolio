@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react'
-import {Container} from 'reactstrap';
+import React, {useEffect, useState} from 'react'
+import {Container, Tooltip} from 'reactstrap';
 import '../css/projects.css';
 import Project from './Project';
 import landingPage from '../img/land.PNG'
@@ -123,11 +123,21 @@ export default function Projects() {
         }
     ]
     const projectItems = projects.map(item => <Project img={item.img} title={item.name} buttonName={item.buttonName} link={item.buttonLink} lang={item.lang}/>)
+    const [tooltipOpen, settooltipOpen] = useState(false);
+    const toggle = () => settooltipOpen(!tooltipOpen)
 
     return (
         <div className="project-container">
         <a className="back2top">&#10148;</a>
         <Container fluid>
+        <div className="info">
+        <span id="tooltip">Important Info</span>
+        <Tooltip placement="right" isOpen={tooltipOpen} target="tooltip" toggle={toggle}>
+        Some of these projects are hosted on Heroku.com. Because I am using a free dyno, Heroku unloads the application and puts it in hibernation until there is a request made to the address. 
+        Due to this some of these projects might take longer than usual to load. Sorry for the inconvenience.
+        </Tooltip>
+        </div>
+        
         {projectItems}
         </Container>
         </div>
