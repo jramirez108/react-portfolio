@@ -59,6 +59,13 @@ export default function Projects() {
             img: champions
         },
         {
+            name: 'Asbservices.net',
+            lang: [html5, css3, js],
+            buttonName: 'Visit',
+            buttonLink: 'https://asbservices.net/',
+            img: asbservices
+        },
+        {
             name: 'Landing Page',
             lang: [html5, css3, js],
             buttonName: 'Visit',
@@ -66,18 +73,18 @@ export default function Projects() {
             img: landingPage
         },
         {
-            name: 'Employee Database',
-            lang: [html5, css3, js, firebase],
-            buttonName: 'Visit',
-            buttonLink: 'https://employeelist-3ae20.web.app/',
-            img: empList
-        },
-        {
             name: 'React Chat Application',
             lang: [html5, css3, js, reactIcon],
             buttonName: 'Source',
             buttonLink: 'https://github.com/jramirez108/react-chat',
             img: chatapp
+        },
+        {
+            name: 'Employee Database',
+            lang: [html5, css3, js, firebase],
+            buttonName: 'Visit',
+            buttonLink: 'https://employeelist-3ae20.web.app/',
+            img: empList
         },
         {
             name: 'Employee Database (Python)',
@@ -113,13 +120,6 @@ export default function Projects() {
             buttonName: 'Visit',
             buttonLink: 'https://portfolio.asbservices.net/calc.html',
             img: calc
-        },
-        {
-            name: 'Asbservices.net',
-            lang: [html5, css3, js],
-            buttonName: 'Visit',
-            buttonLink: 'https://asbservices.net/',
-            img: asbservices
         }
     ]
     const projectItems = projects.map(item => <Project img={item.img} title={item.name} buttonName={item.buttonName} link={item.buttonLink} lang={item.lang}/>)
