@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react'
-import {Container, Tooltip} from 'reactstrap';
+import React, { useEffect, useState } from 'react'
+import { Container, Tooltip } from 'reactstrap';
 import '../css/projects.css';
 import Project from './Project';
 import landingPage from '../img/land.PNG'
@@ -24,38 +24,38 @@ import champions from '../img/champions.PNG'
 export default function Projects() {
 
     useEffect(() => {
-        
-            var scrollToTopBtn= document.querySelector(".back2top")
-            var rootElement = document.documentElement
-    
+
+        var scrollToTopBtn = document.querySelector(".back2top")
+        var rootElement = document.documentElement
+
         function handleScroll() {
-      // do something on scroll
-        var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
-            if ((rootElement.scrollTop / scrollTotal ) > 0.10) {
+            // do something on scroll
+            var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
+            if ((rootElement.scrollTop / scrollTotal) > 0.10) {
                 //show button
                 scrollToTopBtn.style.display = "block"
             } else {
-        //hide button
-        scrollToTopBtn.style.display = "none"
-    }
-    }
-    
+                //hide button
+                scrollToTopBtn.style.display = "none"
+            }
+        }
+
         function scrollToTop() {
-          //scroll to top logic
-        rootElement.scrollTo({
-        top: 0,
-        behavior: "smooth"
-        })
-    }
+            //scroll to top logic
+            rootElement.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        }
         scrollToTopBtn.addEventListener("click", scrollToTop)
         document.addEventListener("scroll", handleScroll)
-        }, [])
+    }, [])
     const projects = [
         {
             name: 'Champions League App',
             lang: [html5, css3, js, reactIcon],
             buttonName: 'Visit',
-            buttonLink: 'https://jr-championsleague.herokuapp.com/',
+            buttonLink: 'https://champions-league-app-8b7fb791f196.herokuapp.com/',
             img: champions
         },
         {
@@ -122,24 +122,24 @@ export default function Projects() {
             img: calc
         }
     ]
-    const projectItems = projects.map(item => <Project img={item.img} title={item.name} buttonName={item.buttonName} link={item.buttonLink} lang={item.lang}/>)
+    const projectItems = projects.map(item => <Project img={item.img} title={item.name} buttonName={item.buttonName} link={item.buttonLink} lang={item.lang} />)
     const [tooltipOpen, settooltipOpen] = useState(false);
     const toggle = () => settooltipOpen(!tooltipOpen)
 
     return (
         <div className="project-container">
-        <a className="back2top">&#10148;</a>
-        <Container fluid>
-        <div className="info">
-        <span id="tooltip">Important Info</span>
-        <Tooltip placement="right" isOpen={tooltipOpen} target="tooltip" toggle={toggle}>
-        Some of these projects are hosted on Heroku.com. Because I am using a free dyno, Heroku unloads the application and puts it in hibernation until there is a request made to the address. 
-        Due to this some of these projects might take longer than usual to load. Sorry for the inconvenience.
-        </Tooltip>
-        </div>
-        
-        {projectItems}
-        </Container>
+            <a className="back2top">&#10148;</a>
+            <Container fluid>
+                <div className="info">
+                    <span id="tooltip">Important Info</span>
+                    <Tooltip placement="right" isOpen={tooltipOpen} target="tooltip" toggle={toggle}>
+                        Some of these projects are hosted on Heroku.com. Because I am using a free dyno, Heroku unloads the application and puts it in hibernation until there is a request made to the address.
+                        Due to this some of these projects might take longer than usual to load. Sorry for the inconvenience.
+                    </Tooltip>
+                </div>
+
+                {projectItems}
+            </Container>
         </div>
     )
 }

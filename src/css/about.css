@@ -1,72 +1,117 @@
-.about{
+.about {
     min-height: 100vh;
     max-width: 100vw;
-    background: #0F2027;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: rgb(36, 36, 36);
+    background: -moz-linear-gradient(90deg, rgba(36, 36, 36, 1) 28%, rgba(45, 45, 45, 1) 66%);
+    background: -webkit-linear-gradient(90deg, rgba(36, 36, 36, 1) 28%, rgba(45, 45, 45, 1) 66%);
+    background: linear-gradient(90deg, rgba(36, 36, 36, 1) 28%, rgba(45, 45, 45, 1) 66%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242424", endColorstr="#2d2d2d", GradientType=1);
     padding-bottom: 10px;
     display: flex;
     align-items: center;
 }
 
-.about h1{
-    padding-top: 5vh;
+.bold {
+    margin-left: -5px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.about h1 {
+    padding-top: 30px;
     text-align: center;
-    color: #a8dadc;
-    font-family: 'Cabin', sans-serif;
-    font-size: 3rem;
+    background-image: linear-gradient(to left, #ffffff, #6d6a70);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 4rem;
+    font-weight: 400;
 }
 
-.about h2{
-    text-align: left;
-    color: rgb(187, 185, 185);
+.about h2,
+.about h3 {
+    background-image: linear-gradient(to left, #9873bb, #9f89b4);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
 }
 
-.about p{
+.about h4 {
+    background-image: linear-gradient(to left, #d9cfe2, #d3b5f0);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 40psxx;
+}
+
+.about p {
     color: #f1faee;
     font-family: 'Cabin', sans-serif;
     font-size: 1rem;
 }
 
-.about img{
+.about img {
     height: 40px;
 }
 
-.about span{
-    padding-left: 10px;
+.about span {
     font-family: 'Cabin', sans-serif;
     font-size: 1rem;
 }
 
-.social {
+.social,
+.skills-container {
     padding-bottom: 40px;
     box-shadow: 0 1em 1em -1em rgba(0, 0, 0, .45);
     text-align: center;
 }
 
 .social img {
-    margin-right: 20px;
+    margin: 20px;
 }
 
 .social img:hover {
-    height: 50px;
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(319deg) brightness(102%) contrast(101%);
 }
 
-.toast{
+.toast {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-.toast:hover{
-    background-color: rgba(255, 255, 255, .95);
+    background-color: rgba(137, 132, 132, 0.361) !important;
+    color: white;
 }
 
+.toast:hover {
+    background-color: rgba(137, 132, 132, 0.500) !important;
+}
 
-@media screen and (max-width: 850px ){
-    .about h1{
+.toast-body img {
+    margin: auto;
+    display: block;
+}
+
+.toast-body span {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.skills {
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 850px) {
+
+    .about h1,
+    .about h2 {
         padding-top: 2vh;
     }
-    .about p{
+
+    .about p {
         font-size: 14px;
     }
 }

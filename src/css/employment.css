@@ -1,0 +1,65 @@
+.company-name,
+.date,
+.role,
+.item {
+    color: white;
+}
+
+.company-name {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.date {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #a5a5a6, #beaece);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.location {
+    margin-top: -5px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #a5a5a6, #beaece);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.role {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    background-image: linear-gradient(to left, #a5a5a6, #beaece);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+li {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    background-image: linear-gradient(to left, #a5a5a6, #beaece);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: outside;
+}
