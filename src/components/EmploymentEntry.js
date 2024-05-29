@@ -1,10 +1,11 @@
 import React from 'react'
 import '../css/employment.css'
 
-export default function EmploymentEntry({ companyName, date, location, role, description }) {
+export default function EmploymentEntry({ companyName, subRole, date, location, role, description }) {
     return (
         <div className='employment-container'>
             <div className='company-name'>{companyName}</div>
+            {subRole != "" ? <div className="location">{subRole}</div> : ""}
             <div className='location'>{location}</div>
             <div className='date'>{date}</div>
             <div className='role'>{role}</div>

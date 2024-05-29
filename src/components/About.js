@@ -8,9 +8,10 @@ import SkillContainer from './SkillContainer'
 import EmploymentEntry from './EmploymentEntry';
 
 export default function About() {
-    var mainspringDescription = ['Developed a specialized data migration tool to seamlessly transfer sensitive medical records from an outdated SQLite database to a revamped version with significant schema changes. Employing C#, .NET 7, Entity Framework, and Log4Net, I engineered a secure solution ensuring data integrity and confidentiality during the transition.',
-        'Developed a live chat function into our Electronic Health Record (EHR) system, enabling real-time messaging among users.',
-        'Continuously enhanced ASP.NET Core-built REST API by developing and updating controllers to accommodate new functionalities. Additionally, created comprehensive unit tests for these endpoints, ensuring the API\'s stability and reliability.'];
+    var mainspringDescription = ['Developed and maintained the Army’s light-weight Electronic Health Record system, HALO. Written in C# and WPF with the ability to use both SQLite and Microsoft SQL Server databases.',
+        'Involved in the development of new features ranging from WPF XAML user interfaces to the backend API endpoints and unit tests using xUnit.',
+        'Designed and developed the HALO Data Migration Utility (HDMU) to securely extract, transform, and load data from an outdated database to the latest HALO version with significant schema changes.',
+        'Developed a live chat feature into the HALO Patient Encounter System utilizing SignalR, enabling real-time messaging among users.'];
     var belcanDescription = ['Led the development and maintenance of both internal and external support websites utilizing PHP, HTML, CSS, JavaScript, and MySQL.',
         'Successfully addressed around 120 work items in one year, encompassing bug fixes and new feature requests aimed at optimizing Support Center operations. ',
         'Played an integral role in the development of a web-based license tracking software system, utilizing Bootstrap, JavaScript, and PHP. This versatile solution was designed for seamless integration across multiple programs.']
@@ -18,8 +19,12 @@ export default function About() {
         'Developed three financial interfaces using Python, cx_Oracle, and SQL queries, collaborating closely with the Financial Systems Division to optimize Python classes.'];
     var fcpsDescription = ['Orchestrated workstation setup and configuration for employees, managing a dedicated team of eight to provide exemplary technology support to multiple schools.',
         'Administered Active Directory user and group operations, resolving hardware, software, and network issues across different devices and models efficiently.'];
+    var caciDescription = ["Spearheaded the implementation of Agile methodologies, including initiating daily status meetings, to significantly enhance project prioritization and team performance.", "Led the complete overhaul of the SFLC Web Application Portal, built using ASP.NET MVC, by: Strategically removing unused applications. Upgrading and enhancing outdated applications. Successfully migrating simpler applications to the USCG SharePoint site using Microsoft Power Platform.",
+        "Orchestrated a comprehensive testing phase for all applications, introducing: Detailed test plans. Multiple rounds of rigorous testing. A structured test result review process, establishing a new standard for quality assurance.",
+        "Collaborated effectively with cross-functional teams to ensure smooth and seamless integration of new methodologies and application updates."
+    ]
     return (
-        <div className="about">
+        <div className="about pt-5">
             <Container>
                 <h1>Jose Ramirez Anleu</h1>
                 <h2>Full-Stack Developer based out of Baltimore, MD. </h2>
@@ -31,25 +36,26 @@ export default function About() {
                 <div className="social">
                     <a href="https://www.linkedin.com/in/jose-a-ramirez/" target="__blank"><img src={linkedin} alt="linkedin" /></a>
                     <a href="https://github.com/jramirez108" target="__blank"><img src={github} alt="github" /></a>
-                    <a href="https://drive.google.com/file/d/1VwfgJA6R4_u7ERfRMZs3xJpkYV5ATVhY/view?usp=sharing" target="__blank"><img src={resumeIcon} alt="resume" /></a>
+                    <a href="https://1drv.ms/b/s!At8bl5p1Y075iZMTIYPadgrnxjRPnw?e=hm3e0F" target="__blank"><img src={resumeIcon} alt="resume" /></a>
                 </div>
                 <div className='skills-container'>
                     <h1 className="skills">Skills</h1>
                     <Row>
                         <SkillContainer icon="c-sharp.png" content="C#" />
                         <SkillContainer icon="net-icon.svg" content=".NET Framework" />
+                        <SkillContainer icon="typescript.png" content="TypeScript" />
                         <SkillContainer icon="ef8.png" content="Entity Framework" />
-                        <SkillContainer icon="xunit.png" content="xUnit" />
                     </Row>
                     <Row>
                         <SkillContainer icon="php.svg" content="PHP" />
+                        <SkillContainer icon="react.png" content="React.js" />
                         <SkillContainer icon="html5.png" content="HTML5" />
                         <SkillContainer icon="css3.svg" content="CSS3" />
-                        <SkillContainer icon="js.png" content="Javascript" />
+
                     </Row>
                     <Row>
                         <SkillContainer icon="node.png" content="Node.js" />
-                        <SkillContainer icon="react.svg" content="React.js" />
+                        <SkillContainer icon="xunit.png" content="xUnit" />
                         <SkillContainer icon="vuejs.png" content="Vue.js" />
                         <SkillContainer icon="gitlab.png" content="Gitlab" />
                     </Row>
@@ -63,14 +69,22 @@ export default function About() {
 
                 <div className='resume'>
                     <h1>Employment</h1>
+                    <EmploymentEntry companyName="CACI International, Inc"
+                        subRole={"Contractor for USCG Surface Forces Logistics Center (SFLC)"}
+                        date="January 2024 - Current"
+                        location="Curtis Bay, MD (On-site)"
+                        role=".NET Developer"
+                        description={caciDescription} />
                     <EmploymentEntry companyName="Mainspring, Inc"
-                        date="April 2022 - Current"
-                        location="Aberdeen Proving Grounds, MD (Remote)"
+                        subRole={"Contractor for Army's PM MC4"}
+                        date="April 2022 - January 2024"
+                        location="Frederick, MD (Remote)"
                         role="Applications Developer"
                         description={mainspringDescription} />
                     <EmploymentEntry companyName="Belcan"
+                        subRole={"Contractor for Army's PM Mission Command (PM MC)"}
                         date="January 2021 - April 2022"
-                        location="Frederick, MD (Remote)"
+                        location="Aberdeen Proving Grounds, MD (Remote)"
                         role="Full-Stack Web Developer"
                         description={belcanDescription} />
                     <EmploymentEntry companyName="Library Of Congress"

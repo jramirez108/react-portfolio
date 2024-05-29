@@ -23,9 +23,8 @@ export default function NavBar() {
                 <NavbarBrand><Link to="/"><img src={icon} alt="jr" height="40px" />  Jose Ramirez</Link></NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
-                    <Nav className="mr-auto" navbar >
-                        <Link to="/about"><NavItem><img className='nav-icon' src={aboutIcon} alt='aboutIcon' /><div className='linkText'> About</div></NavItem></Link>
-                        <Link to="/projects"><NavItem><img className='nav-icon' src={projectIcon} alt='projectIcon' /><div className="linkText"> Projects</div></NavItem></Link>
+                    <Nav className="mr-auto" navbar pills>
+                        <Link to="/projects"><NavItem className="p-1"><div className="linkText">Projects</div></NavItem></Link>
                     </Nav>
                 </Collapse>
             </Navbar>
